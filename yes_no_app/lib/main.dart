@@ -5,6 +5,7 @@ import 'package:yes_no_app/presentation/Screen/Chat/chat_screen.dart';
 import 'package:yes_no_app/presentation/providers/chat_provide.dart';
 
 void main() => runApp(const MyApp());
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -13,11 +14,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => ChatProvider())],
       child: MaterialApp(
-        title: 'Yes No',
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme(selectedColor: 0).theme(),
-        home: const ChatScreen() 
-      ),
+          title: 'Yes No App',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme(selectedColor: 1).theme(),
+          home: const ChatScreen()),
     );
   }
 }
